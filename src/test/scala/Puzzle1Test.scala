@@ -1,15 +1,11 @@
-import collection.mutable.Stack
-import org.scalatest._
-import flatspec._
-import matchers._
-import org.mockito.ArgumentMatchers.{any, anySet, anyString}
-import org.mockito.ArgumentMatchersSugar._
-import org.mockito.IdiomaticMockito.{DoSomethingOps, StubbingOps, VerifyingOps, called, returned, theRealMethod, twice}
-import org.mockito.MockitoSugar.{mock, spy, times, verify, when}
+import org.mockito.ArgumentMatchers.any
+import org.mockito.MockitoSugar.{spy, times, verify}
+import org.scalatest.flatspec._
+import org.scalatest.matchers._
 
 import scala.language.postfixOps
 
-class Puzzle1Test extends AnyFlatSpec with should.Matchers  {
+class Puzzle1Test extends AnyFlatSpec with should.Matchers {
   "sample1()" should "call print twice" in {
     val mockPuzzle = spy(new Puzzle1())
 
